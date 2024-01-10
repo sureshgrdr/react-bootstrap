@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Form, Button } from "react-bootstrap";
 
 function NavComp() {
   return (
@@ -12,7 +13,7 @@ function NavComp() {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='me-auto'>
             <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#link'>Link</Nav.Link>
+            <Nav.Link href='#link'>Portfolio</Nav.Link>
             <NavDropdown title='Dropdown' id='basic-nav-dropdown'>
               <NavDropdown.Item href='#action/3.1'>Action</NavDropdown.Item>
               <NavDropdown.Item href='#action/3.2'>Another action</NavDropdown.Item>
@@ -21,6 +22,10 @@ function NavComp() {
               <NavDropdown.Item href='#action/3.4'>Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <Form className='d-flex'>
+            <Form.Control type='search' placeholder='Search' className='me-2' aria-label='Search' />
+            <Button variant='outline-success'>Search</Button>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
